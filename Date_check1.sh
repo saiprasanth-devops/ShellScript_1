@@ -2,10 +2,11 @@
 
 LastTime=""
 
-Time_Start=$(Date +%s)
+Time_Start=$(date +%s)
 
 Sleep 10
-End_Time=$(Date +%s)
+
+End_Time=$(date +%s)
 
 Total_Time=$((Time_Start-End_Time))
 
