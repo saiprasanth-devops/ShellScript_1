@@ -13,3 +13,5 @@ End_Time=$(date +%s)
 echo "execution ended"
 
 Between_Time=$((Time_Start-End_Time))
+
+echo "$Between_Time"
