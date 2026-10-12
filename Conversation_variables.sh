@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#Below is the variable which is used for the Riya and Aman
 person1=Riya
 person2=Aman
 
