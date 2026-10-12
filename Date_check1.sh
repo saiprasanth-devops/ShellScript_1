@@ -16,3 +16,8 @@ LastTime=$Total_Time
 
 echo "$LastTime"
 
+Data=$LastTime
+
+echo "$Data"
+
+
