@@ -1,0 +1,129 @@
+First, search for the package using dnf search.
+Use dnf list available to check whether the package is available in your enabled repositories.
+If module streams are applicable, check them using dnf module list.
+If the required version is available, install it.
+After installation, verify the installed version.
+If you encounter any issues, check the repository details
+
+
+
+Example:
+
+1.dnf search python3.14
+2.dnf list avaialble python3.14
+3.dnf module list python3.16
+4.dnf install
+
+
+DNF QUICK REFERENCE — RHEL 9
+
+1. Find a package
+   dnf search PACKAGE
+
+2. Check available packages
+   dnf list available PACKAGE
+
+3. Check installed packages
+   dnf list installed PACKAGE
+
+4. Check module streams
+   dnf module list PACKAGE
+
+5. Enable a module stream
+   dnf module enable PACKAGE:VERSION -y
+
+6. Install software
+   dnf install PACKAGE -y
+
+7. Check enabled repositories
+   dnf repolist
+
+8. Search available RPM packages
+   dnf repoquery --available 'PACKAGE*'
+
+9. Refresh repository metadata
+   dnf clean metadata
+   dnf makecache
+
+   
+
+   # DNF Installation Combinations — RHEL 9
+
+## Combination 1: Package Available Directly
+
+**Condition:** The package is found using `dnf search` and is available in the enabled repositories.
+
+```bash
+dnf search nginx
+dnf list available nginx
+dnf install nginx -y
+nginx -v
+```
+
+**Flow:** Search → Check availability → Install → Verify
+
+---
+
+## Combination 2: Package Available Through a Module Stream
+
+**Condition:** The required software version is available through a module stream.
+
+Example: Node.js 22
+
+```bash
+dnf search nodejs
+dnf module list nodejs
+dnf module enable nodejs:22 -y
+dnf install nodejs -y
+node --version
+```
+
+**Flow:** Search → Check module streams → Enable required stream → Install → Verify
+
+---
+
+## Combination 3: Package Not Available in Enabled Repositories
+
+**Condition:** The required package or version cannot be found in the available-package listing.
+
+Example: Python 3.14
+
+```bash
+dnf search python3.14
+dnf list available 'python3.14*'
+dnf module list python
+dnf repolist
+dnf repoquery --available 'python3.14*'
+```
+
+**Flow:** Search → Check availability → Check applicable modules → Check repositories → Find a supported installation method
+
+**Note:** A missing package does not automatically mean a module is required.
+
+---
+
+## Combination 4: Package Already Installed
+
+**Condition:** You want to check whether the software is already installed.
+
+Example: Nginx
+
+```bash
+dnf list installed nginx
+rpm -q nginx
+nginx -v
+```
+
+**Flow:** Check installed package → Verify version
+
+---
+
+## General Rules
+
+1. Start with `dnf search PACKAGE`.
+2. Check `dnf list available PACKAGE`.
+3. If module streams are applicable, run `dnf module list PACKAGE`.
+4. Select the required module stream only when needed.
+5. Install the package using `dnf install PACKAGE -y`.
+6. Verify the installed version.
+7. If the required package is missing, investigate enabled repositories and supported installation methods.
