@@ -1,5 +1,7 @@
 #!/bin/bash
 
+###############Add all the parameters to the script which are paseed in console#############
+
 ####It will return all the content which is given in the console###
 
 # 54.224.179.112 | 172.31.41.250 | t3.micro | https://github.com/saiprasanth-devops/ShellScript_1.git
@@ -15,3 +17,15 @@ echo "Enter the data and pull the given parameters from the console: $@"
 # sh Special_Variable.sh Hello Hello1 Hello2
 # outcome:
 # Enter the data and pull the given parameters from the console: Hello Hello1 Hello2
+
+
+########return the count whiich are passed in the console##############
+
+
+echo "This will store the count of the of the parameters/variables passed $#"
+
+
+# sh Special_Variable.sh Hello Hello1 Hello2
+# outcome:
+# echo "This will store the count of the of the parameters/variables passed 3
+#3 is the count of the variables passed.
