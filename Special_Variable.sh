@@ -64,4 +64,4 @@ echo "This will return the full path of the file $(realpath $0)"
 
 #5.a
 fullpath=$(realpath $0)
-echo ("$fullpath")
+echo ($fullpath)
