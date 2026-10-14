@@ -61,3 +61,7 @@ echo "This will name of the file(.sh file) $0"
 echo "This will return the full path of the file $(realpath $0)"
 
 # sh Special_Variable.sh
+
+#5.a
+fullpath=$(realpath $0)
+echo ("$fullpath")
