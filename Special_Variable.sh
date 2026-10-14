@@ -47,9 +47,17 @@ echo "This will return the first count of the of the parameters/variables passed
 
 
 #4.
-########return the file which are passed in the console##############
+########return the file name##############
 
 echo "This will name of the file(.sh file) $0"
 
 # sh Special_Variable.sh
 
+
+
+#5.
+########return the full path of the file##############
+
+echo "This will return the full path of the file $(realpath $0)"
+
+# sh Special_Variable.sh
