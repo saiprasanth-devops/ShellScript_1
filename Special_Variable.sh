@@ -49,7 +49,7 @@ echo "This will return the first count of the of the parameters/variables passed
 #4.
 ########return the file which are passed in the console##############
 
-echo "This will return the first count of the of the parameters/variables passed $0"
+echo "This will name of the file(.sh file) $0"
 
 # sh Special_Variable.sh
 
