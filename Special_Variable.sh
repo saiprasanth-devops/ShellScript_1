@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+#1.
 ###############Add all the parameters to the script which are paseed in console#############
 
 ####It will return all the content which is given in the console###
@@ -18,8 +20,8 @@ echo "Enter the data and pull the given parameters from the console: $@"
 # outcome:
 # Enter the data and pull the given parameters from the console: Hello Hello1 Hello2
 
-
-########return the count whiich are passed in the console##############
+#2.
+########return the count which are passed in the console##############
 
 
 echo "This will store the count of the of the parameters/variables passed $#"
@@ -29,3 +31,25 @@ echo "This will store the count of the of the parameters/variables passed $#"
 # outcome:
 # echo "This will store the count of the of the parameters/variables passed 3
 #3 is the count of the variables passed.
+
+
+
+#3.
+########return the first count which are passed in the console##############
+
+echo "This will return the first count of the of the parameters/variables passed $1"
+
+# sh Special_Variable.sh Hello Hello1 Hello2
+# outcome:
+# echo "This will return the first count of the of the parameters/variables passed Hello 
+#Hello since the first one in variables passed.
+
+
+
+#4.
+########return the file which are passed in the console##############
+
+echo "This will return the first count of the of the parameters/variables passed $0"
+
+# sh Special_Variable.sh
+
