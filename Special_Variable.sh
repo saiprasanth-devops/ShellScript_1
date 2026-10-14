@@ -8,3 +8,10 @@
 
 
 echo "Enter the data and pull the given parameters from the console: $@"
+
+
+# outcome:
+# Input from cmd :
+# sh Special_Variable.sh Hello Hello1 Hello2
+# outcome:
+# Enter the data and pull the given parameters from the console: Hello Hello1 Hello2
