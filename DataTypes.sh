@@ -33,7 +33,7 @@ echo "$total1"
 #3.
 declare -i count=10
 
-counter=count+1
+counter=$(($count+1))
 
 echo "$counter"
 
