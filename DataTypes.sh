@@ -68,10 +68,10 @@ then
 echo "fail"
 elif [ "$marks" -lt 50 ]
 echo "third class"
-elif [ "$marks" -lt 60]
+elif [ "$marks" -lt 60 ]
 then 
 echo "second class"
-elif [ "$marks" -lt 75]
+elif [ "$marks" -lt 75 ]
 then 
 echo "first class"
 else
