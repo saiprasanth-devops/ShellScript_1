@@ -30,3 +30,12 @@ echo "$total1"
 ## name3 will be considered as 0 since if we are using the (()) the compiler will understand it is adding
 ## and will consider the name3 as 0
 
+#3.
+declare -i count=10
+
+counter=count+1
+
+echo "$counter"
+
+
+
