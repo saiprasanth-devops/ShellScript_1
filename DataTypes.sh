@@ -56,6 +56,10 @@ fullname="Sai Prasanth Y"
 echo "${fullname}adav"
 
 
+fullname1="Sai Prasanth Y"
+now=${fullname1}adav
+echo "$now"
+
 
 
 
