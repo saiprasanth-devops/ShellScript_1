@@ -65,3 +65,69 @@ echo "This will return the full path of the file $(realpath $0)"
 #5.a
 fullpath=$(realpath $0)
 echo "$fullpath"
+
+
+#6.
+############to get the USER whi is running this script##############
+
+echo "to get the user who is running the script $USER"
+
+##outcome
+
+
+
+#7.
+###########to get the PWD#########
+echo "to get the present working directory $PWD"
+
+##outcome
+
+
+
+#8.
+#############to get the $Home ##########
+
+echo " to get the home of the user $HOME"
+
+###outcome
+
+
+#8.
+##########to get the PID (process management)######3
+
+echo "to get the pid of the execution command: $$"
+
+
+###outcome
+
+
+#9.
+####### to get the PID of the command running in background
+
+sleep 10 &
+
+echo "get the PID of the sllp which is running in the background $!"
+
+wait $!
+
+#Explanation: 
+#1.The above sleep command will hold the execution for 10 seconds by default 
+#2.Then we will get the PID using the $!
+#3.for the wait $! this will wait until the sleep is completed
+
+
+
+#10.
+#######to get the line number######3
+
+echo "to get the line number use $LINENO"
+
+#11.
+####to get the previous command status#####3
+
+echo "get the previous command status $?"
+
+#11.
+##total time taken to complete this script#####3
+
+echo "total time taken to complete this script $SECONDS"
