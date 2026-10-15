@@ -73,7 +73,7 @@ echo "$fullpath"
 echo "to get the user who is running the script $USER"
 
 ##outcome
-
+#to get the user who is running the script ec2-user
 
 
 #7.
@@ -81,6 +81,7 @@ echo "to get the user who is running the script $USER"
 echo "to get the present working directory $PWD"
 
 ##outcome
+#to get the present working directory /home/ec2-user/ShellScript_1
 
 
 
@@ -90,6 +91,8 @@ echo "to get the present working directory $PWD"
 echo " to get the home of the user $HOME"
 
 ###outcome
+# to get the home of the user /home/ec2-user
+
 
 
 #8.
@@ -99,6 +102,8 @@ echo "to get the pid of the execution command: $$"
 
 
 ###outcome
+#to get the pid of the execution command: 21922
+
 
 
 #9.
@@ -115,6 +120,9 @@ wait $!
 #2.Then we will get the PID using the $!
 #3.for the wait $! this will wait until the sleep is completed
 
+#outcome
+#get the PID of the sllp which is running in the background 21925
+
 
 
 #10.
@@ -122,12 +130,23 @@ wait $!
 
 echo "to get the line number use $LINENO"
 
+#outcome
+##to get the line number use 123
+
+
 #11.
 ####to get the previous command status#####3
 
 echo "get the previous command status $?"
 
+##outcome
+#get the previous command status 0
+
+
 #11.
 ##total time taken to complete this script#####3
 
 echo "total time taken to complete this script $SECONDS"
+
+##outcome
+#total time taken to complete this script 10
