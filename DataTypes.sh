@@ -39,3 +39,15 @@ echo "$counter"
 
 
 
+
+##derive the arrays
+fruits=("Apple" "Mango" "Pappaya")
+#we need to retrive the data
+
+echo "${fruits[0]}"
+echo "${fruits[1]}"
+echo "${fruits[2]}"
+echo "${fruits[@]}"
+
+
+
