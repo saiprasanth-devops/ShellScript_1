@@ -51,3 +51,13 @@ echo "${fruits[@]}"
 
 
 
+##
+fullname="Sai Prasanth Y"
+echo "${fullname}adav"
+
+
+
+
+
+
+
