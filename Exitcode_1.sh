@@ -11,7 +11,17 @@ echo "${user_id} this is the id for the user"
 fi
 
 
-dnf module list nginx > /home/ec2-user/log.txt
+#dnf module list nginx > /home/ec2-user/log.txt
+
+add_lof
+
+add_lof(){
+
+dnf module list nginx 
+dnf serach nginx
+dnf list available nginx
+
+}> /home/ec2-user/log.txt
 
 
 
