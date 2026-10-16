@@ -18,7 +18,7 @@ fi
 add_lof(){
 
 dnf module list nginx 
-dnf serach nginx
+dnf search nginx
 dnf list available nginx
 
 } > /home/ec2-user/log.txt
