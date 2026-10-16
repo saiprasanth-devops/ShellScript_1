@@ -10,3 +10,4 @@ echo "$? staus of the pwd command"
 if [ "$statuscode" -eq 0]
 then 
 echo "{$path} this is the path of pwd"
+fi
