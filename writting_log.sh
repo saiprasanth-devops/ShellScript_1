@@ -12,13 +12,14 @@ validate "Hello" "Hello2"
 
 exit_code=
 user_id=$(id -u)
+echo "$user_id"
 appname=$1
-if [ "$user_id" -eq 0]
+if [ "$user_id" -eq 0 ]
 then 
 echo "the user is root access and the id is $user_id"
 exit_code=$(echo $?)
 else 
-echo "this is not the roort user please proceed with the root user"
+echo "this is not the root user please proceed with the root user"
 exit 1
 fi
 
