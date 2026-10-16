@@ -26,19 +26,22 @@ fi
 
 appinfo(){
 
- version=$("{$appname} -v")
+ version=$("${appname} -v")  
 
  status_versioncode=$(echo $?)
+ echo "enter if "$status_versioncode"
 
- if [ "$status_versioncode" -eq 0 ]
+ if [ "$status_versioncode" -eq 0 ]  
  then
  dnf remove "$appname" -y
 fi
+
 dnf search "$appname"     |  tee -a /home/ec2-user/${appname}.log
 dnf list available "$appname" |  tee -a /home/ec2-user/${appname}.log
 dnf module list "$appname" |  tee -a /home/ec2-user/${appname}.log
 dnf install "$appname" -y |  tee -a /home/ec2-user/${appname}.log
 }  >> /home/ec2-user/${appname}.log
+
 
 systemctl status "$appname"
 exit_code=$(echo $?)
@@ -49,7 +52,6 @@ else
 echo "${appname} is already present"
 exit 1
 fi
-
 
 exit_code=$(echo $?)
 if [ $exit_code -eq 0 ]
@@ -62,11 +64,3 @@ echo "$nginxstatus"
 else 
 echo "${appname} is not installed"
 fi
-
-
-
-
-
-
-
-
