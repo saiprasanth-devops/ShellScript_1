@@ -3,4 +3,4 @@
 
 $PWD
 
-echo "{$?} staus of the pwd command"
+echo "$? staus of the pwd command"
