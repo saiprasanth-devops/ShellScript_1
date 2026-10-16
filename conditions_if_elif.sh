@@ -19,7 +19,7 @@ echo "Hello"
 
 
 
-exitcode1=0
+exitcode1=1
 
 
 if [ "$exitcode1" -eq 0 ]
