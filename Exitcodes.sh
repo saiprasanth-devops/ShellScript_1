@@ -1,6 +1,8 @@
 #!/bin/bash
 
 
+
+
 path=$(pwd)
 statuscode=$(echo $?)
 echo "$PWD status of the pwd command"
