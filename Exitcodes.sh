@@ -2,7 +2,7 @@
 
 ls
 path=$(pwd)
-statuscode=$($?)
+statuscode=$(echo $?)
 # echo "$PWD staus of the pwd command"
 # echo "$? staus of the pwd command"
 
