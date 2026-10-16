@@ -4,7 +4,7 @@
 exitcode=0
 
 
-if[ "$exitcode" -eq 0 ]
+if [ "$exitcode" -eq 0 ]
 then 
 echo "this is equal to 0 and the installation"
 else
