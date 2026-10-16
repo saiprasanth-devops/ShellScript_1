@@ -1,10 +1,10 @@
 #!/bin/bash
 
-ls
+
 path=$(pwd)
 statuscode=$(echo $?)
-# echo "$PWD staus of the pwd command"
-# echo "$? staus of the pwd command"
+echo "$PWD staus of the pwd command"
+echo "$? staus of the pwd command"
 
 echo "$statuscode"
 if [ $statuscode -eq 0 ];
