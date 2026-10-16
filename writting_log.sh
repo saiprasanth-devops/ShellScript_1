@@ -46,6 +46,7 @@ fi
 
 exit_code=$(echo $?)
 if [ $exit_code -eq 0 ]
+echo "----------------------- enter if "$exit_code"
 then
 systemctl start "$appname"
 systemctl enable "$appname"
