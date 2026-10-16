@@ -30,7 +30,7 @@ appinfo(){
 dnf search "$appname"
 dnf list available "$appname"
 dnf module list "$appname"
-dnf install "$appname"
+dnf install "$appname" -y
 }  >> /home/ec2-user/${appname}.log
 
 systemctl status "$appname"
