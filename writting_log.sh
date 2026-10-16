@@ -26,11 +26,18 @@ fi
 
 appinfo(){
 
+ version=$("{$appname} -v")
 
-dnf search "$appname"
-dnf list available "$appname"
-dnf module list "$appname"
-dnf install "$appname" -y
+ status_versioncode=$(echo $?)
+
+ if [ "$status_versioncode" -eq 0 ]
+ then
+ dnf remove "$appname" -y
+fi
+dnf search "$appname"     |  tee -a /home/ec2-user/${appname}.log
+dnf list available "$appname" |  tee -a /home/ec2-user/${appname}.log
+dnf module list "$appname" |  tee -a /home/ec2-user/${appname}.log
+dnf install "$appname" -y |  tee -a /home/ec2-user/${appname}.log
 }  >> /home/ec2-user/${appname}.log
 
 systemctl status "$appname"
