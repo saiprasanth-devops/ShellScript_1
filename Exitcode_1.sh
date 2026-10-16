@@ -13,7 +13,7 @@ fi
 
 #dnf module list nginx > /home/ec2-user/log.txt
 
-add_lof
+
 
 add_lof(){
 
@@ -25,7 +25,7 @@ dnf list available nginx
 
 
 
-
+add_lof
 
 
 
