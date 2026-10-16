@@ -46,8 +46,10 @@ fi
 
 exit_code=$(echo $?)
 if [ $exit_code -eq 0 ]
-then 
-nginxstatus=$(systemctl status nginx)
+then
+systemctl start "$appname"
+systemctl enable "$appname"
+nginxstatus=$(systemctl status "$appname")
 echo "$nginxstatus"
 else 
 echo "${appname} is not installed"
