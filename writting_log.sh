@@ -31,9 +31,9 @@ appinfo(){
  status_versioncode=$(echo $?)
  echo "enter if "$status_versioncode"
 
- if [ "$status_versioncode" -eq 0 ]  
- then
- dnf remove "$appname" -y
+if [ "$status_versioncode" -eq 0 ];  
+then
+dnf remove "$appname" -y
 fi
 
 dnf search "$appname"     |  tee -a /home/ec2-user/${appname}.log
@@ -45,7 +45,7 @@ dnf install "$appname" -y |  tee -a /home/ec2-user/${appname}.log
 
 systemctl status "$appname"
 exit_code=$(echo $?)
-if [ "$exit_code" -ne 0 ]
+if [ "$exit_code" -ne 0 ];
 then
 appinfo
 else
@@ -54,9 +54,9 @@ exit 1
 fi
 
 exit_code=$(echo $?)
-if [ $exit_code -eq 0 ]
-echo "----------------------- enter if "$exit_code"
+if [ "$exit_code" -eq 0 ];
 then
+echo "----------------------- enter if "$exit_code"
 systemctl start "$appname"
 systemctl enable "$appname"
 nginxstatus=$(systemctl status "$appname")
