@@ -14,6 +14,8 @@ exit_code=
 user_id=$(id -u)
 echo "$user_id"
 appname=$1
+versionchecks1=nginx
+versioncheck2=mysql
 if [ "$user_id" -eq 0 ]
 then 
 echo "the user is root access and the id is $user_id"
@@ -26,8 +28,13 @@ fi
 
 appinfo(){
 
-
+if [ "$versionchecks1" = "nginx"];
+then
  version=$("${appname}" -v)
+elif [ "$versionchecks1" = "nginx" ];
+then 
+version=$("${appname}" -V)
+if
 
  status_versioncode=$(echo $?)
  echo "==============>enter if "$status_versioncode""
