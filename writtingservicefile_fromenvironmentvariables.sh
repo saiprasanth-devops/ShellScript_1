@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-foldername="/etc/system.d/system/"
+foldername="/etc/systemd/system/"
 filename="servicefile.service"
 
 cd "${foldername}"
